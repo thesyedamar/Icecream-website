@@ -1,0 +1,6 @@
+{
+  "name": "Swirl Creamery",
+  "description": "Swirl Creamery — Ice cream, just the way you like it. Small-batch artisanal flavors, festive Diwali offers, and playful scoops made to swirl.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
