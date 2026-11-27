@@ -1,3 +1,5 @@
+import storyCupBaseImg from '../assets/images/story_cup_base_1794669904822.jpg';
+
 export interface StoryValue {
   id: string;
   title: string;
@@ -29,4 +31,4 @@ export const STORY_VALUES: StoryValue[] = [
   },
 ];
 
-export const STORY_CUP_IMAGE = '/src/assets/images/story_cup_base_1794669904822.jpg';
+export const STORY_CUP_IMAGE = storyCupBaseImg;

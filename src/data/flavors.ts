@@ -1,3 +1,13 @@
+import cupStrawberryImg from '../assets/images/cup_strawberry_swirl_1794669902130.jpg';
+import cupPistachioImg from '../assets/images/cup_roasted_pistachio_1794669901672.jpg';
+import cupVanillaImg from '../assets/images/cup_madagascar_vanilla_1794669902183.jpg';
+import cupCaramelImg from '../assets/images/cup_salted_caramel_1794669902336.jpg';
+import cupChocolateImg from '../assets/images/cup_belgian_chocolate_1794669903211.jpg';
+import cupMangoImg from '../assets/images/cup_alphonso_mango_1794669903245.jpg';
+import cupBlueberryImg from '../assets/images/cup_blueberry_cheesecake_1794669903640.jpg';
+import cupMintImg from '../assets/images/cup_mint_choc_chip_1794669903941.jpg';
+import cupSaffronImg from '../assets/images/cup_saffron_cardamom_1794669904847.jpg';
+
 export interface Flavor {
   id: string;
   name: string;
@@ -28,7 +38,7 @@ export const FLAVORS: Flavor[] = [
     circleBg: '#f6d5df',
     description: 'Sun-ripened field strawberries churned with sweet cream and tart berry ribbons.',
     notes: 'Sweet Cream · Berry Ripple',
-    image: '/src/assets/images/cup_strawberry_swirl_1794669902130.jpg',
+    image: cupStrawberryImg,
     soldCount: 4820,
     bestSellerRank: 1,
     bestSellerTag: 'Most loved',
@@ -45,7 +55,7 @@ export const FLAVORS: Flavor[] = [
     circleBg: '#d9ebd2',
     description: 'Slow-roasted green pistachios stone-ground into velvety dairy with toasted nut crunch.',
     notes: 'Roasted Nuts · Sea Salt',
-    image: '/src/assets/images/cup_roasted_pistachio_1794669901672.jpg',
+    image: cupPistachioImg,
     soldCount: 4190,
     bestSellerRank: 2,
     bestSellerTag: 'Fan favorite',
@@ -62,7 +72,7 @@ export const FLAVORS: Flavor[] = [
     circleBg: '#faecc0',
     description: 'Whole cured Madagascar vanilla pods steeped for 24 hours in farm-fresh sweet cream.',
     notes: 'Vanilla Pod · Silky Custard',
-    image: '/src/assets/images/cup_madagascar_vanilla_1794669902183.jpg',
+    image: cupVanillaImg,
     soldCount: 3640,
     featuredInConveyor: true,
   },
@@ -77,7 +87,7 @@ export const FLAVORS: Flavor[] = [
     circleBg: '#f5d9b8',
     description: 'Copper-kettle burnt sugar caramel folded with flaky Maldon sea salt crystals.',
     notes: 'Burnt Sugar · Flaky Salt',
-    image: '/src/assets/images/cup_salted_caramel_1794669902336.jpg',
+    image: cupCaramelImg,
     soldCount: 3910,
     bestSellerRank: 3,
     bestSellerTag: 'Rich classic',
@@ -94,7 +104,7 @@ export const FLAVORS: Flavor[] = [
     circleBg: '#e2cec6',
     description: 'Single-origin 70% dark couverture cocoa whipped with deep fudge ribbons and curls.',
     notes: '70% Cocoa · Fudge Ribbon',
-    image: '/src/assets/images/cup_belgian_chocolate_1794669903211.jpg',
+    image: cupChocolateImg,
     soldCount: 3480,
     featuredInConveyor: true,
   },
@@ -109,7 +119,7 @@ export const FLAVORS: Flavor[] = [
     circleBg: '#fce0aa',
     description: 'Ratnagiri Alphonso mangoes blended smooth with bright citrus zest and juicy fruit cubes.',
     notes: 'Alphonso Puree · Bright Citrus',
-    image: '/src/assets/images/cup_alphonso_mango_1794669903245.jpg',
+    image: cupMangoImg,
     soldCount: 2890,
   },
   {
@@ -123,7 +133,7 @@ export const FLAVORS: Flavor[] = [
     circleBg: '#dedaf2',
     description: 'Cultured cream cheese ice cream swirled with wild blueberry compote and graham crumble.',
     notes: 'Wild Berry · Graham Crumble',
-    image: '/src/assets/images/cup_blueberry_cheesecake_1794669903640.jpg',
+    image: cupBlueberryImg,
     soldCount: 2710,
   },
   {
@@ -137,7 +147,7 @@ export const FLAVORS: Flavor[] = [
     circleBg: '#d0ece2',
     description: 'Garden-steeped fresh peppermint cream studded with crisp dark chocolate shards.',
     notes: 'Fresh Mint · Cocoa Shards',
-    image: '/src/assets/images/cup_mint_choc_chip_1794669903941.jpg',
+    image: cupMintImg,
     soldCount: 2540,
   },
   {
@@ -151,7 +161,7 @@ export const FLAVORS: Flavor[] = [
     circleBg: '#f6dfb0',
     description: 'Kashmiri saffron threads and freshly cracked green cardamom topped with toasted almonds.',
     notes: 'Kashmiri Kesar · Roasted Almond',
-    image: '/src/assets/images/cup_saffron_cardamom_1794669904847.jpg',
+    image: cupSaffronImg,
     soldCount: 3750,
     bestSellerRank: 4,
     bestSellerTag: 'Festive pick',

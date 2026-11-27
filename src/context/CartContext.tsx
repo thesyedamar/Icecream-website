@@ -16,6 +16,24 @@ import {
   setItemQuantityState,
   type CartItem,
 } from '../utils/cartLogic';
+import { FLAVOR_BY_ID } from '../data/flavors';
+import { DIWALI_OFFERS } from '../data/offers';
+
+function resolveBundledCartImage(item: CartItem): CartItem {
+  const directFlavor = FLAVOR_BY_ID[item.id];
+  if (directFlavor) {
+    return { ...item, image: directFlavor.image };
+  }
+  if (item.id.startsWith('bundle-')) {
+    const offerId = item.id.slice('bundle-'.length);
+    const offer = DIWALI_OFFERS.find((o) => o.id === offerId);
+    const leadFlavor = offer ? FLAVOR_BY_ID[offer.flavorIds[0]] : undefined;
+    if (leadFlavor) {
+      return { ...item, image: leadFlavor.image };
+    }
+  }
+  return item;
+}
 
 interface CartContextValue {
   items: CartItem[];
@@ -38,7 +56,9 @@ const CartContext = createContext<CartContextValue | null>(null);
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>(() => {
     if (typeof window === 'undefined') return [];
-    return safeParseCartStorage(window.localStorage.getItem(CART_STORAGE_KEY));
+    return safeParseCartStorage(window.localStorage.getItem(CART_STORAGE_KEY)).map(
+      resolveBundledCartImage
+    );
   });
   const [isOpen, setIsOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
